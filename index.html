@@ -12,6 +12,17 @@
     body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     .w3-bar-block .w3-bar-item {padding:20px}
 
+    .columnview {
+      display: flex;
+    }
+
+    .innercolumn {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      
+    }
   </style>
 </head>
 
@@ -52,18 +63,31 @@
     <div class="w3-padding-32">
 	    <h3><b>Founded in the summer of 2021, the Catalyst at UC San Diego is an inclusive academic paper series that aims to empower the voices of students who have a passion for conducting research.</b></h3>
       
+      <br>
+      <div style="text-align: center;">
+        <h6>Check out our published works here:</h6>
+        <button class="w3-button" style="background:lightgray;width:20%;min-width:170px;padding:10px 10px 10px 10px;margin:0px 5px 0 0; border-radius: 5px; transition: 0.3s;" onclick="window.open('journals.html')">Combined Journals</button>
+      <!-- <button class="w3-button" style="background:lightgray;width:25%;min-width:200px;padding:15px 10px 10px 10px;margin:2px 5px 0 0;" onclick="window.open('https://forms.gle/WRJE41HmaVtogf3y6', '_blank');">Author Interest Form</button>
+      <button class="w3-button" style="background:lightgray;width:25%;min-width:200px;padding:15px 10px 10px 10px;margin:2px 0 0 0;" onclick="window.open('https://forms.gle/YYW2ngVsVScS2ZRx7', '_blank');">Editor Interest Form</button> -->
+      </div>
       <!-- Action -->
       <div>
         <hr>
-        <h5>We have completed recruitment for our 2023-24 volume so we are not currently accepting interest forms. We'll be posting new forms here when we begin recruitment for our next volume, so <b>we encourage you to bookmark this site</b>.
-        <br><br>
+        <div class="columnview">
+          <div class="innercolumn">
+            <h6>We are currently recruiting Authors and Editors for our 2025-26 volume!</h6>
+            <img src="./assets/Author Interest QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200">
+          </div>
+          <div class="innercolumn">
+            <h6>We are also accepting Board Applications for the 2025-26 academic year!</h6>
+            <img src="./assets/Board Apps QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200">
+          </div>
+        </div>
+        <br> <br>
+        <h5 style="text-align: center;">
         We will also be hosting events throughout the school year; <b>follow us <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/thecatalystatucsd">Instagram</a> and join our <a target="_blank" rel="noreferrer noopener" href="https://dsc.gg/catalyst-research">Discord server</a></b> to get notified!
         </h5>
         <div style="display: flex; flex-direction:column;align-items: center; justify-content: center;">
-          <p>Check out our published works here:</p>
-          <button class="w3-button" style="background:lightgray;width:20%;min-width:170px;padding:10px 10px 10px 10px;margin:0px 5px 0 0; border-radius: 5px; transition: 0.3s;" onclick="window.open('journals.html')">Combined Journals</button>
-        <!-- <button class="w3-button" style="background:lightgray;width:25%;min-width:200px;padding:15px 10px 10px 10px;margin:2px 5px 0 0;" onclick="window.open('https://forms.gle/WRJE41HmaVtogf3y6', '_blank');">Author Interest Form</button>
-        <button class="w3-button" style="background:lightgray;width:25%;min-width:200px;padding:15px 10px 10px 10px;margin:2px 0 0 0;" onclick="window.open('https://forms.gle/YYW2ngVsVScS2ZRx7', '_blank');">Editor Interest Form</button> -->
         <table style="display:flex; align-items: center;">
           <tr>
             <th><img src="./assets/Insta QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200"></th>
