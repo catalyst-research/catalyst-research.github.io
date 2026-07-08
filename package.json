@@ -1,0 +1,30 @@
+{
+  "name": "catalyst-website",
+  "version": "1.0.0",
+  "description": "The Catalyst at UC San Diego - Digital research paper series website",
+  "main": "index.html",
+  "scripts": {
+    "start": "webpack serve --open",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "serve": "webpack serve --open --mode development"
+  },
+  "keywords": [
+    "ucsd",
+    "research",
+    "journal",
+    "catalyst",
+    "public-health"
+  ],
+  "author": "The Catalyst at UC San Diego",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.3"
+  }
+}

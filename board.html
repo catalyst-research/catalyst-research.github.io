@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board - The Catalyst</title>
+    <link rel="icon" href="assets/Favicon.png" type="image/png">
+    <script>
+        (function () {
+            var theme = localStorage.getItem('catalyst-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-body">
+    <canvas id="particles"></canvas>
+    <div id="cursor"></div>
+    <div id="cursor-glow"></div>
+
+    <div class="headingimage">
+        <a href="https://escholarship.org/uc/ucsd_aep_catalyst">
+            <img src="assets/Favicon.png" alt="Catalyst Logo"/>
+        </a>
+    </div>
+    <div class="headingspace"></div>
+    <div class="heading">
+        <button class="heading-button" onclick="window.location.href='index.html'">About</button>
+        <button class="heading-button" onclick="window.location.href='apply.html'">Apply</button>
+        <button class="heading-button current" onclick="window.location.href='board.html'">Board</button>
+        <button class="heading-button" onclick="window.location.href='journals.html'">Journals</button>
+        <button class="heading-button" onclick="window.location.href='events.html'">Events</button>
+        <button class="heading-button" onclick="window.location.href='contact.html'">Contact</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </button>
+    </div>
+
+    <div class="content">
+        <p class="maintext">Meet the Team</p>
+    </div>
+
+    <div class="boardcontent">
+        <div class="grid">
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Blake Ma</p>
+                <p class="desc2">Editor-in-Chief</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Ethan Cook</p>
+                <p class="desc2">Junior Editor-in-Chief</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Emily Lai</p>
+                <p class="desc2">Junior Editor-in-Chief</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Cameron Gum</p>
+                <p class="desc2">Secretary/Technical Editor</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Skye Belsher</p>
+                <p class="desc2">Outreach/Technical Editor</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Aaliya Luo</p>
+                <p class="desc2">Newspaper/Technical Editor</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Vani Gupta</p>
+                <p class="desc2">Newspaper</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Camellia Li</p>
+                <p class="desc2">Newspaper</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Camila Guevara</p>
+                <p class="desc2">Community Outreach</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Fabrizio Malatesta</p>
+                <p class="desc2">Outreach</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Iris Qiu</p>
+                <p class="desc2">Outreach</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Kate Wang</p>
+                <p class="desc2">Outreach</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Jason Liu</p>
+                <p class="desc2">Webmaster</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Prakhar Shah</p>
+                <p class="desc2">Webmaster</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Momo Kihara</p>
+                <p class="desc2">Illustrator</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Sumeet Heer</p>
+                <p class="desc2">Illustrator</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+            
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Swan Chen</p>
+                <p class="desc2">Illustrator</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Catalina Philips-Li</p>
+                <p class="desc2">Illustrator</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Jinisha Seiya</p>
+                <p class="desc2">Illustrator</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+
+            <div class="board-member">
+                <img src="assets/no_img.jpeg">
+                <p class="desc">Brighton Burton</p>
+                <p class="desc2">TBD</p>
+                <!-- <p class="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+        </div>
+    </div>
+
+    <p class="endcontent"></p>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/Favicon.png" alt="Catalyst Logo" class="footer-logo">
+                <p>The Catalyst is a digital paper series based at UC San Diego empowering undergraduate research voices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">About</a>
+                <a href="apply.html">Apply</a>
+                <a href="board.html">Board</a>
+                <a href="journals.html">Journals</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: thecatalystatucsd@gmail.com</p>
+                <p>UC San Diego</p>
+                <p>La Jolla, CA 92093</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/thecatalystatucsd/?hl=en" target="_blank" rel="noopener">
+                        <img src="assets/instagramlogo.png" alt="Instagram">
+                    </a>
+                    <a href="https://discord.com/invite/qvvsUZnpH5" target="_blank" rel="noopener">
+                        <img src="assets/discordlogo.jpeg" alt="Discord">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Catalyst at UC San Diego. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

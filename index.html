@@ -1,163 +1,167 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>The Catalyst @ UCSD</title>
-  <link rel="shortcut icon" type="image/x-icon" href="./assets/Favicon.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-  <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-    .w3-bar-block .w3-bar-item {padding:20px}
-
-    .columnview {
-      display: flex;
-    }
-
-    .innercolumn {
-      align-items: center;
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Catalyst at UC San Diego</title>
+    <link rel="icon" href="assets/Favicon.png" type="image/png">
+    <script>
+        (function () {
+            var theme = localStorage.getItem('catalyst-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="main-body">
+    <canvas id="particles"></canvas>
+    <div id="cursor"></div>
+    <div id="cursor-glow"></div>
 
-<body>
-
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:3;width:25%;min-width:150px;" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">✗</a>
-  <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-  <a href="./journals.html" onclick="w3_close()" class="w3-bar-item w3-button">Journals</a>
-  <a target="_blank" rel="noreferrer noopener" href="https://escholarship.org/uc/ucsd_aep_catalyst" onclick="w3_close()" class="w3-bar-item w3-button">eScholarship</a>
-  <!-- <a href="./meet-the-team.html" onclick="w3_close()" class="w3-bar-item w3-button">Meet the Team</a> -->
-  <a href="./contact.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
-  <!--  <a target="_blank" rel="noreferrer noopener" href="https://forms.gle/WRJE41HmaVtogf3y6" onclick="w3_close()" class="w3-bar-item w3-button">Author Interest Form</a> -->
-  <!--  <a target="_blank" rel="noreferrer noopener" href="https://forms.gle/YYW2ngVsVScS2ZRx7" onclick="w3_close()" class="w3-bar-item w3-button">Editor Interest Form</a> -->
-</nav>
-
-<!-- Top Menu -->
-<div class="w3-top" style="background:white;z=index:2;width=100%;filter:drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.1));">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">The Catalyst @ UC San Diego&nbsp;&nbsp;</div>
-  </div>
-</div>
-  
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:30px">
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32">
-    <br><br>
-    <img src="./assets/Full Black.png" alt="The Catalyst Full Logo Black" class="w3-image" width="400">
-    <h3><b>Propelling Scholars Forward</b></h3><br>
-    <img src="./assets/giesel.jpg" alt="Giesel Library @ UC San Diego" class="w3-image" width="800" height="533">
-    
-    <!-- Main Content Section -->
-    <div class="w3-padding-32">
-	    <h3><b>Founded in the summer of 2021, the Catalyst at UC San Diego is an inclusive academic paper series that aims to empower the voices of students who have a passion for conducting research.</b></h3>
-      
-      <br>
-      <div style="text-align: center;">
-        <h6>Check out our published works here:</h6>
-        <button class="w3-button" style="background:lightgray;width:20%;min-width:170px;padding:10px 10px 10px 10px;margin:0px 5px 0 0; border-radius: 5px; transition: 0.3s;" onclick="window.open('journals.html')">Combined Journals</button>
-      <!-- <button class="w3-button" style="background:lightgray;width:25%;min-width:200px;padding:15px 10px 10px 10px;margin:2px 5px 0 0;" onclick="window.open('https://forms.gle/WRJE41HmaVtogf3y6', '_blank');">Author Interest Form</button>
-      <button class="w3-button" style="background:lightgray;width:25%;min-width:200px;padding:15px 10px 10px 10px;margin:2px 0 0 0;" onclick="window.open('https://forms.gle/YYW2ngVsVScS2ZRx7', '_blank');">Editor Interest Form</button> -->
-      </div>
-      <!-- Action -->
-      <div>
-        <hr>
-        <div class="columnview">
-          <div class="innercolumn">
-            <h6>We are currently recruiting Authors and Editors for our 2025-26 volume!</h6>
-            <img src="./assets/Author Interest QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200">
-            <h6><a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSc3CMvcVRhYfGpuvTiV6E_Mtoku14Qvgsqhga4Jp351HntVgw/viewform">Interest Form</a></h6>
-          </div>
-          <div class="innercolumn">
-            <h6>We are also accepting Board Applications for the 2025-26 academic year!</h6>
-            <img src="./assets/Board Apps QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200">
-            <h6><a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSfm5uwTwhBCYAm_8zoOb5n1M4Zmz962DDI6UZLFFHqBGr-CUw/viewform">Application Form</a></h6>
-          </div>
-        </div>
-        <br>
-        <h5 style="text-align: center;">
-        We will also be hosting events throughout the school year; <b>follow us on <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/thecatalystatucsd">Instagram</a> and join our <a target="_blank" rel="noreferrer noopener" href="https://dsc.gg/catalyst-research">Discord server</a></b> to get notified!
-        </h5>
-        <div style="display: flex; flex-direction:column;align-items: center; justify-content: center;">
-        <table style="display:flex; align-items: center;">
-          <tr>
-            <th><img src="./assets/Insta QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200"></th>
-            <th><img src="./assets/Discord QR.png" alt="The Catalyst Full Logo Black" class="w3-image" width="200"></th>
-          </tr>
-          <tr>
-            <th>Instagram</th>
-            <th>Discord</th>
-          </tr>
-        </table>
-       </div>
-      </div>
-      
-      <!-- Body Text -->
-      <div>
-        <hr>
-        <p>We welcome any and all students who are interested in publishing their work, and we are dedicated to fostering a diverse community of interdisciplinary scholarship. Through this journal, we:<br>
-        </p>
-        <ul>
-          <li>Emphasize helping new students find their path in research, and aim to help publish new (and especially underrepresented) scholars.</li>
-          <li>Do not discriminate based on race, color, national origin, religion, sex, gender, disability, age, medical condition, ancestry, marital status, citizenship, or sexual orientation.</li>
-          <li>Are an academic organization connected to <a target="_blank" rel="noreferrer noopener" href="https://ugresearch.ucsd.edu/">UC San Diego Undergraduate Research Hub</a>.
-        </ul>
-        
-        <hr>
-        <p>
-        This journal was founded with the intention of supporting those who are passionate about their studies. We encourage any student interested in research to get involved. Seriously. We understand that innovation comes in many different forms. Whether a scholar is distinguished in their field or is brand new to research, we are here to help them grow. Whether a scholar is publishing a paper on neuroscience or an arrangement of artistic works (or anything in between), we are here to feature and celebrate their work.
-        <br><br>
-        If you are interested in getting involved with our organization as an author, please see our guidelines and submission criteria below. It contains a lot of helpful info as well as external links to our project/journal interest form.
-        </p>
-      </div>
-      
-      <!-- Footer -->
-      <div>
-        <hr>
-        <div class="w3-third">
-          <h3>Resources</h3>
-          <a target="_blank" rel="noreferrer noopener" href="https://docs.google.com/document/d/169syyVSzbiKYUJMAvVWL4nQGxmXh0z2EKLDNORBFe0I/edit?usp=sharing">Guidelines & Submission Criteria</a><br>
-          <!-- <a target="_blank" rel="noreferrer noopener" href="https://forms.gle/WRJE41HmaVtogf3y6">Author Interest Form</a><br>
-          <a target="_blank" rel="noreferrer noopener" href="https://forms.gle/YYW2ngVsVScS2ZRx7">Editor Interest Form</a> -->
-        </div>
-        <div class="w3-third">
-          <h3>Learn More</h3>
-          <a target="_blank" rel="noreferrer noopener" href="https://escholarship.org/uc/ucsd_aep_catalyst">E-Scholarship Site</a><br>
-          <a target="_blank" rel="noreferrer noopener" href="mailto:thecatalystatucsd@gmail.com">Email: thecatalystatucsd@gmail.com</a>
-        </div>
-        <div class="w3-third">
-          <h3>Get Connected</h3>
-          <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/thecatalystatucsd">Instagram</a><br>
-          <a target="_blank" rel="noreferrer noopener" href="https://dsc.gg/catalyst-research">Discord</a>
-        </div>
-      </div>
+    <div class="headingimage">
+        <a href="https://escholarship.org/uc/ucsd_aep_catalyst">
+            <img src="assets/Favicon.png" alt="Catalyst Logo"/>
+        </a>
+    </div>
+    <div class="headingspace"></div>
+    <div class="heading">
+        <button class="heading-button current" onclick="window.location.href='index.html'">About</button>
+        <button class="heading-button" onclick="window.location.href='apply.html'">Apply</button>
+        <button class="heading-button" onclick="window.location.href='board.html'">Board</button>
+        <button class="heading-button" onclick="window.location.href='journals.html'">Journals</button>
+        <button class="heading-button" onclick="window.location.href='events.html'">Events</button>
+        <button class="heading-button" onclick="window.location.href='contact.html'">Contact</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </button>
     </div>
 
-  </div>
-</div>
+    <div class="content hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/catalyst.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="fade-item hero-content">
+            <p class="maintext">Propelling Scholars Forward</p>
+        </div>
+    </div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
+    <div class="additionalcontent secondcontent fade-item">
+        <h2 class="section-header">About Us</h2>
+    </div>
 
+    <div class="subcontent secondcontent fade-item">
+        <div class="column-text">
+            <h3>The Catalyst is a student run digital paper series based at UC San Diego which aims to give voices to undergraduate students who have a passion for research. We welcome any and all students who are interested in publishing their work, and we are dedicated to fostering a diverse community of interdisciplinary scholarship.</h3>
+        </div>
+    </div>
+
+    <div class="subcontent secondcontent fade-item">
+        <div class="column-image">
+            <img src="assets/giesel.jpg" alt="UC San Diego Campus">
+        </div>
+        
+        <div class="column-text">
+            <p>We emphasize helping new students find their path in research, and aim to help publish new (and especially underrepresented) scholars. This includes expanding to include students from other institutions, with a focus on public health research papers.</p>
+        </div>
+    </div>
+
+    <div class="subcontent secondcontent fade-item">
+        <div class="column-text">
+            <ul>
+                <p style="font-weight: bold;">Our Mission: </p>
+                <p class="smallertext">Give voices to undergraduate students passionate about research, with a focus on public health research papers.</p>
+                <p class="smallertext">No discrimination based on race, color, national origin, religion, sex, gender, disability, age, medical condition, ancestry, marital status, citizenship, or sexual orientation.</p>
+                <p class="smallertext">We are an academic organization connected to UC San Diego Undergraduate Research Hub.</p>
+            </ul>
+        </div>
+
+        <div class="column-image">
+            <img src="assets/giesel.jpg" alt="Research Environment">
+        </div>
+    </div>
+
+    <div class="additionalcontent secondcontent fade-item">
+        <h2 class="section-header">Our Goal</h2>
+    </div>
+
+    <div class="subcontent secondcontent fade-item">
+        <div class="column-image">
+            <img src="assets/giesel.jpg" alt="Academic Setting">
+        </div>
+        
+        <div class="column-text">
+            <p>This journal was founded with the intention of supporting those who are passionate about their studies. We encourage any student interested in research to get involved. Seriously.</p>
+        </div>
+    </div>
+
+    <div class="subcontent secondcontent fade-item">
+        <div class="column-text">
+            <p>We understand that innovation comes in many different forms. Whether a scholar is distinguished in their field or is brand new to research, we are here to help them grow. Whether a scholar is publishing a paper on public health or other interdisciplinary work, we are here to feature and celebrate their research.</p>
+        </div>
+    </div>
+
+    <div class="subcontent secondcontent fade-item">
+        <div class="column-text">
+            <p>For more info, please visit our <a href="https://escholarship.org/uc/ucsd_aep_catalyst">UC San Diego eScholarship Site</a>.</p>
+        </div>
+    </div>
+
+    <div class="additionalcontent thirdcontent fade-item">
+        <p class="section-header connecttext">Connect With Us</p>
+        <a href="https://www.instagram.com/thecatalystatucsd/?hl=en" target="_blank" rel="noopener">
+            <img src="assets/instagramlogo.png" alt="Instagram"/>
+        </a>
+        <a href="https://discord.com/invite/qvvsUZnpH5" target="_blank" rel="noopener">
+            <img src="assets/discordlogo.jpeg" alt="Discord"/>
+        </a>
+    </div>
+
+    <p class="endcontent"></p>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="assets/Favicon.png" alt="Catalyst Logo" class="footer-logo">
+                <p>The Catalyst is a digital paper series based at UC San Diego empowering undergraduate research voices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">About</a>
+                <a href="apply.html">Apply</a>
+                <a href="board.html">Board</a>
+                <a href="journals.html">Journals</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: thecatalystatucsd@gmail.com</p>
+                <p>UC San Diego</p>
+                <p>La Jolla, CA 92093</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/thecatalystatucsd/?hl=en" target="_blank" rel="noopener">
+                        <img src="assets/instagramlogo.png" alt="Instagram">
+                    </a>
+                    <a href="https://discord.com/invite/qvvsUZnpH5" target="_blank" rel="noopener">
+                        <img src="assets/discordlogo.jpeg" alt="Discord">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Catalyst at UC San Diego. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="scrolldown" onclick="document.querySelector('.additionalcontent').scrollIntoView({ behavior: 'smooth' })">
+        <img src="assets/downarrow.png" alt="Scroll down"/>
+    </button>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
